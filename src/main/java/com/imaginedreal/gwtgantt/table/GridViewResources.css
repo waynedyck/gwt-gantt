@@ -1,0 +1,109 @@
+.taskGrid { 
+	-webkit-user-select:none;
+	font-family:arial;
+}
+
+.taskGrid .header { 
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	height:49px; 
+	width:10000px;
+	border-bottom:1px solid #bebebe; 
+	background:#eee; 
+}
+
+.taskGrid .header table { 
+	position:absolute;
+	top:0px;
+	left:0px; 
+	background:#EEE; 
+	height:49px; 
+	table-layout:fixed; 
+	width:0px;
+	border-collapse:collapse;
+}
+
+.taskGrid .header table td {  
+	height: 49px; 
+	border-right:1px solid #BEBEBE;
+	overflow:hidden; 
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	cursor:default;
+}
+
+.taskGrid .header table td div { 
+	line-height:24px; 
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	cursor:default; 
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.taskGrid .body {
+	position:absolute;
+	top:50px;
+	left:0px;
+	right:0px;
+	bottom:0px; 
+	-webkit-user-select:none;
+	overflow-x: scroll;
+}
+
+.taskGrid .body table {
+	position:absolute;
+	top:0px;
+	left:0px; 
+	table-layout:fixed; 
+	width:0px; 
+	font-size:12px; 
+	font-family:arial; 
+	-webkit-user-select:none;
+}
+
+
+@external expandButton, collapseButton, noButton;
+@sprite .expandButton {
+	border:0px;
+	background-color:transparent;
+	gwt-image:"expandArrowImage";
+	cursor:pointer;
+	width:16px;
+	vertical-align:top;
+	margin-top:1px;
+}
+
+@sprite .collapseButton {
+	border:0px;
+	background-color:transparent;
+	gwt-image:"collapseArrowImage";
+	cursor:pointer;
+	width:16px;
+	vertical-align:top;
+	margin-top:1px;
+}
+.noButton {
+	background:none;
+	border:0px;
+	background-color:transparent;
+	width:16px;
+        height:1px;
+}
+
+
+@external cellTableSummaryRow, cellTableRowIsCollapsed;
+.cellTableSummaryRow {
+	font-weight:bold;	
+}
+.cellTableRowIsCollapsed {
+	display:none;
+}
+
+@external cellTableColumnRightAlign;
+.cellTableColumnRightAlign {
+	text-align:right;
+	padding-right:15px;
+}

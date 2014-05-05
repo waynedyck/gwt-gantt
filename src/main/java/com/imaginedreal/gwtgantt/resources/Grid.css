@@ -1,0 +1,25 @@
+@external treeTable, treeTableHeader, treeTableBody, treeRowNumber, selectedRow, summaryRow;
+.treeTable { -webkit-user-select:none;-moz-user-select:none; }
+.treeTableHeader { position:absolute;top:0px;left:0px;right:0px;height:49px; width:10000px;border-bottom:1px solid #bebebe; background:#eee; -background: literal("-moz-linear-gradient( center top, #FFF 0%, #ececec 100%)");-background-image:literal("-webkit-gradient(linear, left top, left bottom, color-stop(0, #FFF), color-stop(1, #ececec))");}
+.treeTableHeader table { position:absolute;top:0px;left:0px; background:#EEE; height:49px; table-layout:fixed; width:0px;}
+.treeTableHeader table td {  height: 49px; border-right:1px solid #BEBEBE;overflow:hidden; -webkit-user-select:none;-moz-user-select:none;cursor:default;}
+.treeTableHeader table td div { line-height:24px; -webkit-user-select:none;-moz-user-select:none;cursor:default; margin-left:5px;margin-right:5px;}
+.treeTableBody { position:absolute;top:50px;left:0px;right:0px;bottom:0px; -webkit-user-select:none;-moz-user-select:none; }
+.treeTableBody table { position:absolute;top:0px;left:0px; table-layout:fixed; width:0px; font-size:12px; font-family:arial; -webkit-user-select:none;-moz-user-select:none;}
+
+@if !user.agent safari ie8 {
+.treeTableBody table td { height: 24px; border-bottom:1px solid #CCC; border-right:1px solid #CCC; overflow:hidden;white-space:nowrap; cursor:default; font-family:inherit; font-size:12px; }
+} @else {
+.treeTableBody table td { height: 23px; border-bottom:1px solid #CCC; border-right:1px solid #CCC; overflow:hidden;white-space:nowrap; cursor:default; font-family:inherit; font-size:12px; }
+}
+
+.treeTableBody table td div { padding-left:5px;padding-right:5px; }
+.treeTableBody table tr.summaryRow td { font-weight:bold; }
+.treeTableBody table tr.selectedRow td { border-color: rgb(241,202,88);background-color:rgb(253,236,169); }
+.selectedRow .treeRowNumber { width:40px;text-align:center;color:#000; border-color: rgb(241,202,88);background-color:rgb(253,236,169);font-weight:normal; }
+		
+.treeTableBody table td:first-child { font-weight:normal !IMPORTANT; background:#EEE;width:40px;text-align:center;color:#666; -webkit-user-select:none;-moz-user-select:none;cursor:default; }
+
+@external .gwt-ToggleButton, .gwt-ToggleButton-down;
+.treeTableBody .gwt-ToggleButton { border:0px;background:transparent;background-image:none;  outline-style: none;}
+.treeTableBody .gwt-ToggleButton-down { border:0px;background:transparent; background-image:none;}

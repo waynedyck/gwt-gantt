@@ -1,0 +1,61 @@
+@external arrowLeft-blue, arrowRight-blue, arrowLeft-red, arrowRight-red, arrowLeft-green, arrowRight-green, arrowLeft-purple, arrowRight-purple, arrowLeft-orange, arrowRight-orange;
+@sprite .arrowLeft-blue  {gwt-image: "blueArrowImage"; position:absolute; bottom:-7px;left:-1px;width:7px;height:7px; }
+@sprite .arrowRight-blue {gwt-image: "blueArrowImage"; position:absolute; bottom:-7px;right:-1px;width:7px;height:7px; -webkit-transform: scaleX(-1); -moz-transform: scaleX(-1)}
+@sprite .arrowLeft-red  {gwt-image: "redArrowImage"; position:absolute; bottom:-7px;left:-1px;width:7px;height:7px; }
+@sprite .arrowRight-red {gwt-image: "redArrowImage"; position:absolute; bottom:-7px;right:-1px;width:7px;height:7px; -webkit-transform: scaleX(-1); -moz-transform: scaleX(-1)}
+@sprite .arrowLeft-green  {gwt-image: "greenArrowImage"; position:absolute; bottom:-7px;left:-1px;width:7px;height:7px; }
+@sprite .arrowRight-green {gwt-image: "greenArrowImage"; position:absolute; bottom:-7px;right:-1px;width:7px;height:7px; -webkit-transform: scaleX(-1); -moz-transform: scaleX(-1)}
+@sprite .arrowLeft-purple  {gwt-image: "purpleArrowImage"; position:absolute; bottom:-7px;left:-1px;width:7px;height:7px; }
+@sprite .arrowRight-purple {gwt-image: "purpleArrowImage"; position:absolute; bottom:-7px;right:-1px;width:7px;height:7px; -webkit-transform: scaleX(-1); -moz-transform: scaleX(-1)}
+@sprite .arrowLeft-orange  {gwt-image: "orangeArrowImage"; position:absolute; bottom:-7px;left:-1px;width:7px;height:7px; }
+@sprite .arrowRight-orange {gwt-image: "orangeArrowImage"; position:absolute; bottom:-7px;right:-1px;width:7px;height:7px; -webkit-transform: scaleX(-1); -moz-transform: scaleX(-1)}
+
+@external task-default, task-blue, task-red, task-green, task-purple, task-orange;
+.task-default,
+.task-blue   { border:1px solid #2952A3; background: #668CD9; border-radius:3px; -moz-border-radius:3px; -webkit-user-select: none; -moz-user-select: none; opacity:0.75; }
+.task-red    { border:1px solid #A32929; background: #D96666; border-radius:3px; -moz-border-radius:3px; -webkit-user-select: none; -moz-user-select: none; opacity:0.75; }
+.task-green  { border:1px solid #0D7813; background: #4CB052; border-radius:3px; -moz-border-radius:3px; -webkit-user-select: none; -moz-user-select: none; opacity:0.75; }
+.task-purple { border:1px solid #7A367A; background: #B373B3; border-radius:3px; -moz-border-radius:3px; -webkit-user-select: none; -moz-user-select: none; opacity:0.75; }
+.task-orange { border:1px solid #BE6D00; background: #F2A640; border-radius:3px; -moz-border-radius:3px; -webkit-user-select: none; -moz-user-select: none; opacity:0.75; }
+
+@external pctComplete;
+.pctComplete { background:black;position:absolute; pointer-events:none; -webkit-user-select: none; -moz-user-select: none; }
+.task-default .pctComplete,
+.task-blue    .pctComplete { background:black; }
+.task-red     .pctComplete { background:black; }
+.task-green   .pctComplete { background:black; }
+.task-purple  .pctComplete { background:black; }
+.task-orange  .pctComplete { background:black; }
+
+@external taskSelected, taskHovered;
+.taskSelected { opacity:1; -webkit-box-shadow: #B8B8B8 3px 3px 3px; -moz-box-shadow: #B8B8B8 3px 3px 3px;}
+.taskHovered { -webkit-box-shadow: #B8B8B8 -2px -2px 2px, #B8B8B8 3px 3px 3px; -moz-box-shadow: #B8B8B8 -2px -2px 2px, #B8B8B8 3px 3px 3px; }
+		
+@external milestone-default, milestone-blue, milestone-red, milestone-green, milestoneLabel, milestoneHovered, milestoneSelected;
+.milestone-default,
+.milestone-blue { font-size:17px; line-height:14px; color:#2952A3;opacity:0.75; -webkit-user-select: none; -moz-user-select: none; cursor: default; }
+.milestone-red { font-size:17px; line-height:14px; color:#A32929;opacity:0.75; -webkit-user-select: none; -moz-user-select: none; cursor: default; }
+.milestone-green { font-size:17px; line-height:14px; color:#0D7813;opacity:0.75; -webkit-user-select: none; -moz-user-select: none; cursor: default; }
+
+.milestoneLabel { position:absolute;line-height:18px;font-size:12px;font-weight:normal;font-family:arial;padding-left:3px; color:#555;text-shadow:#FFF 1px 1px;white-space:nowrap; cursor: default; -webkit-user-select: none; -moz-user-select: none;}
+
+.milestoneHovered { text-shadow: 2px 3px 3px #B8B8B8; }
+.milestoneSelected { text-shadow: 2px 3px 3px #B8B8B8; opacity:1; }
+
+@external milestone-purple, milestone-orange;
+.milestone-purple { font-size:17px; line-height:14px; color:#7A367A;opacity:0.75; -webkit-user-select: none; -moz-user-select: none; cursor: default; }
+.milestone-orange { font-size:17px; line-height:14px; color:#BE6D00;opacity:0.75; -webkit-user-select: none; -moz-user-select: none; cursor: default; }
+
+@external summary-default, summary-blue, summary-red, summary-green,summary-purple,summary-orange, summaryHovered, summarySelected;
+.summary-default,
+.summary-blue { border:1px solid #2952A3; background: #2952A3; border-radius: 3px 3px 0px 0px; -moz-border-radius: 3px 3px 0px 0px; -webkit-user-select: none; -moz-user-select: none; opacity:0.75; }
+.summary-red { border:1px solid #A32929; background: #A32929; border-radius: 3px 3px 0px 0px; -moz-border-radius: 3px 3px 0px 0px; -webkit-user-select: none; -moz-user-select: none; opacity:0.75; }
+.summary-green { border:1px solid #0D7813; background: #0D7813; border-radius:3px; -moz-border-radius:3px; -webkit-user-select: none; -moz-user-select: none; opacity:0.75; }
+.summary-purple { border:1px solid #7A367A; background: #7A367A; border-radius:3px; -moz-border-radius:3px; -webkit-user-select: none; -moz-user-select: none; opacity:0.75; }
+.summary-orange { border:1px solid #BE6D00; background: #BE6D00; border-radius:3px; -moz-border-radius:3px; -webkit-user-select: none; -moz-user-select: none; opacity:0.75; }
+.summarySelected { opacity:1; -webkit-box-shadow: #B8B8B8 3px 3px 3px; -moz-box-shadow: #B8B8B8 3px 3px 3px;}
+.summaryHovered { -webkit-box-shadow: #B8B8B8 -2px -2px 2px, #B8B8B8 3px 3px 3px; -moz-box-shadow: #B8B8B8 -2px -2px 2px, #B8B8B8 3px 3px 3px; }
+
+@external taskLabel;
+.taskLabel { position:absolute;line-height:18px;font-size:12px;font-weight:normal;font-family:arial;padding-left:20px; color:#555;text-shadow:#FFF 1px 1px;white-space:nowrap; cursor: default; -webkit-user-select: none; -moz-user-select: none;}
+	

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <inherits name="com.google.gwt.user.UserAgent"/>
+  <inherits name='com.google.gwt.user.User'/>
+  <source path='gwtgantt'/>
+	
+  <replace-with class="com.imaginedreal.gwtgantt.renderer.GanttWeekRendererImpl">
+    <when-type-is class="com.imaginedreal.gwtgantt.renderer.GanttWeekRendererImpl"/>
+  </replace-with>
+
+  <replace-with class="com.imaginedreal.gwtgantt.renderer.GanttWeekRendererNoSVGImpl">
+    <when-type-is class="com.imaginedreal.gwtgantt.renderer.GanttWeekRendererImpl"/>
+    <any>
+	    <when-property-is name="user.agent" value="ie6" />
+	    <when-property-is name="user.agent" value="ie7" />
+	    <when-property-is name="user.agent" value="ie8" />
+    </any>
+  </replace-with>
+
+</module>

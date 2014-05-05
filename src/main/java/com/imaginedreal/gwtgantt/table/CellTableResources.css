@@ -1,0 +1,162 @@
+@def selectionBorderWidth 0px;
+.cellTableWidget {
+	font-family:arial;
+	font-size:12px;
+	border-collapse:collapse;
+	background:#FFF;
+	-webkit-user-select: none;
+}
+
+.cellTableFirstColumn {
+	width:50px;
+}
+
+.cellTableWidget tbody .cellTableFirstColumn {
+  width:50px;
+  border-bottom: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  text-align: center;
+  color: #555;
+  background:#EEE;
+  font-weight:normal;
+}
+
+.cellTableLastColumn {
+  
+}
+
+.cellTableFooter {
+
+}
+
+.cellTableHeader {
+  border-bottom: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  padding: 3px 15px;
+  text-align: left;
+  color: #555;
+  background:#EEE;
+  font-weight:normal;
+  height:22px;
+}
+
+.cellTableFirstColumnFooter {
+  
+}
+
+.cellTableFirstColumnHeader {
+  
+}
+
+.cellTableLastColumnFooter {
+  
+}
+
+.cellTableLastColumnHeader {
+  
+}
+
+.cellTableCell {
+  padding:0px;
+  border-bottom: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  white-space:nowrap;
+  overflow:hidden;
+  height: 23px;/*24 in firefox*/
+  font-family:arial;
+  font-size:12px;
+}
+
+
+
+.cellTableEvenRow {
+
+}
+
+.cellTableEvenRowCell {
+
+}
+
+.cellTableOddRow {
+
+}
+
+.cellTableOddRowCell {
+
+}
+
+.cellTableHoveredRow {
+
+}
+
+.cellTableHoveredRowCell {
+
+}
+
+.cellTableKeyboardSelectedCell {
+	
+}
+
+.cellTableKeyboardSelectedRow {
+
+}
+
+.cellTableKeyboardSelectedRowCell {
+	
+}
+
+.cellTableSelectedRow {
+  border: 0px solid #fff;
+  color: #000;
+  background-color:#FDECA9;
+}
+
+.cellTableSelectedRow td,
+.cellTableWidget tbody .cellTableSelectedRow .cellTableFirstColumn {
+  border: 0px solid #fff;
+  color: #000;
+  background-color:#FDECA9;
+  border-bottom: 1px solid #F1CA58;
+  border-right: 1px solid #F1CA58;
+}
+
+.cellTableSelectedRowCell {
+	
+}
+
+.cellTableLoading {
+
+}
+
+/** Styling for Editable Cell Items */
+
+.cellTableCell div div {
+  padding:0px 15px;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.cellTableCell input {
+  width:100%;
+  height:22px;
+  border:0px;
+}
+
+.cellTableCell select {
+  width:100%;
+  height:22px;
+  border:0px;
+  padding-left:10px;
+}
+
+.cellTableSelectedRow select {
+	background: #FDECA9;	
+}
+
+.cellTableKeyboardSelectedRow .cellTableKeyboardSelectedCell select {
+	background: #FFF;	
+}
+
+.cellTableSortedHeaderAscending {}
+.cellTableSortedHeaderDescending {}
+.cellTableSortableHeader {}
