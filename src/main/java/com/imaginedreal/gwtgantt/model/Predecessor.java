@@ -1,12 +1,15 @@
 package com.imaginedreal.gwtgantt.model;
 
+import java.io.Serializable;
+
 /**
  * Defines the predecessor task of the task that contains it.
  *
  * @author Brad Rydzewski
  */
-public class Predecessor {
+public class Predecessor implements Serializable {
 
+    private static final long serialVersionUID = -1333014049637190068L;
     /**
      * The unique identifier of the predecessor task.
      */

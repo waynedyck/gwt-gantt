@@ -27,7 +27,6 @@ public enum DurationFormat {
 	PERCENT,
 	NONE;
 
-
 	public static String format(DurationFormat timeUnit, double value) {
 		String format;
 		switch (timeUnit) {
