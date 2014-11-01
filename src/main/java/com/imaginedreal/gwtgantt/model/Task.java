@@ -316,14 +316,12 @@ public class Task implements Serializable {
         return Integer.valueOf(order).compareTo(o.getOrder());
     }
     
-//
-//    public boolean equals(Object o) {
-//        return o instanceof Task && 
-//               o != null &&
-//               ((Task)o).getUID() == this.UID;
-//    }
+    public boolean equals(Object o) {
+        return o instanceof Task && 
+               o != null &&
+               ((Task)o).getUID() == this.UID;
+    }
 
-//
     public Task clone() { //throws CloneNotSupportedException {
         Task task = new Task();
         task.UID = this.UID;
