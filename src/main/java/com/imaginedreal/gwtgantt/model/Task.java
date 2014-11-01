@@ -17,6 +17,7 @@
  */
 package com.imaginedreal.gwtgantt.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -27,8 +28,9 @@ import java.util.List;
  *
  * @author Brad Rydzewski
  */
-public class Task {
+public class Task implements Serializable {
 
+    private static final long serialVersionUID = 7961968545635865703L;
     public static final String STYLE_BLUE = "blue";
     public static final String STYLE_RED = "red";
     public static final String STYLE_GREEN = "green";
@@ -314,14 +316,12 @@ public class Task {
         return Integer.valueOf(order).compareTo(o.getOrder());
     }
     
-//
-//    public boolean equals(Object o) {
-//        return o instanceof Task && 
-//               o != null &&
-//               ((Task)o).getUID() == this.UID;
-//    }
+    public boolean equals(Object o) {
+        return o instanceof Task && 
+               o != null &&
+               ((Task)o).getUID() == this.UID;
+    }
 
-//
     public Task clone() { //throws CloneNotSupportedException {
         Task task = new Task();
         task.UID = this.UID;

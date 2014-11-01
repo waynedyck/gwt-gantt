@@ -17,14 +17,16 @@
  */
 package com.imaginedreal.gwtgantt.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author Brad Rydzewski
  */
-public class DateRange {
+public class DateRange implements Serializable {
 
+    private static final long serialVersionUID = -8474704909456871450L;
     private Date start;
     private Date finish;
 
