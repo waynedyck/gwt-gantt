@@ -28,7 +28,7 @@ import java.util.List;
  *
  * @author Brad Rydzewski
  */
-public class Task implements Serializable {
+public class Task implements Serializable, Comparable<Task> {
 
     private static final long serialVersionUID = 7961968545635865703L;
     public static final String STYLE_BLUE = "blue";
@@ -38,6 +38,7 @@ public class Task implements Serializable {
     public static final String STYLE_PURPLE = "purple";
     public static final String STYLE_DEFAULT = STYLE_BLUE;
     private int UID;
+    private String guid;
     private String name;
     private String notes;
     private int order;
@@ -311,7 +312,15 @@ public class Task implements Serializable {
         return predecessors.add((Predecessor) new Predecessor(UID, type));
     }
 
+    public String getGuid() {
+        return guid;
+    }
 
+    public void setGuid(String guid) {
+        this.guid = guid;
+    }
+    
+    @Override
     public int compareTo(Task o) {
         return Integer.valueOf(order).compareTo(o.getOrder());
     }
@@ -325,6 +334,7 @@ public class Task implements Serializable {
     public Task clone() { //throws CloneNotSupportedException {
         Task task = new Task();
         task.UID = this.UID;
+        task.guid = this.guid;
         task.finish = this.finish;
         task.level = this.level;
         task.milestone = this.milestone;
@@ -341,4 +351,5 @@ public class Task implements Serializable {
 
         return task;
     }
+
 }
