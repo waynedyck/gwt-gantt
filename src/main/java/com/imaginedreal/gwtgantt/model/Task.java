@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/
  */
+
 package com.imaginedreal.gwtgantt.model;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -28,9 +28,8 @@ import java.util.List;
  *
  * @author Brad Rydzewski
  */
-public class Task implements Serializable, Comparable<Task> {
+public class Task implements Comparable<Task> {
 
-    private static final long serialVersionUID = 7961968545635865703L;
     public static final String STYLE_BLUE = "blue";
     public static final String STYLE_RED = "red";
     public static final String STYLE_GREEN = "green";
@@ -38,7 +37,6 @@ public class Task implements Serializable, Comparable<Task> {
     public static final String STYLE_PURPLE = "purple";
     public static final String STYLE_DEFAULT = STYLE_BLUE;
     private int UID;
-    private String guid;
     private String name;
     private String notes;
     private int order;
@@ -311,14 +309,6 @@ public class Task implements Serializable, Comparable<Task> {
     public boolean addPredecessor(int UID, PredecessorType type) {
         return predecessors.add((Predecessor) new Predecessor(UID, type));
     }
-
-    public String getGuid() {
-        return guid;
-    }
-
-    public void setGuid(String guid) {
-        this.guid = guid;
-    }
     
     @Override
     public int compareTo(Task o) {
@@ -334,7 +324,6 @@ public class Task implements Serializable, Comparable<Task> {
     public Task clone() { //throws CloneNotSupportedException {
         Task task = new Task();
         task.UID = this.UID;
-        task.guid = this.guid;
         task.finish = this.finish;
         task.level = this.level;
         task.milestone = this.milestone;
