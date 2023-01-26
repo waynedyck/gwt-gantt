@@ -4,7 +4,7 @@
     <groupId>com.imaginedreal</groupId>
     <artifactId>gwt-gantt</artifactId>
     <packaging>jar</packaging>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
     <name>gwt-gantt</name>
     <url>https://github.com/waynedyck/gwt-gantt</url>
     <licenses>
